@@ -39,13 +39,9 @@ jobs:
           ls
           echo "::set-output name=STATUS::success"
           
-      - name: Upload Release deb
-        id: upload_release_asset
-        uses: actions/upload-release-asset@v1.0.1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Upload
+        if: steps.package.outputs.STATUS == 'success'
+        uses: actions/upload-artifact@v3
         with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: /home/runner/work/atilo/atilo/build/debs/atilo.deb
-          asset_name: atilo.deb
-          asset_content_type: application/zip
+          name: debs
+          path: "/home/runner/work/atilo/atilo/build/debs/atilo.deb"
