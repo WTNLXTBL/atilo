@@ -37,15 +37,9 @@ jobs:
           echo "::set-output name=STATUS::success"
           export debs=$(realpath debs/)
 
-      - name: Create Release and Upload Release Asset
-        if: steps.package.outputs.STATUS == 'success'
-        uses: softprops/action-gh-release@v1
+      - name: Upload to release
+        uses: JasonEtco/upload-to-release@master
         with:
-         #tag_name: ${{ github.ref }}
-         tag_name: 2.2.0
-         #name: Release ${{ github.ref }}
-         name: Release 2.1.0
-         body: TODO New Release.
-         draft: false
-         prerelease: false
-         files: "/home/runner/work/atilo/atilo/build/debs/atilo.deb"
+          args: /home/runner/work/atilo/atilo/build/debs/atilo.deb
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
