@@ -23,11 +23,11 @@ jobs:
         id: package
         run: |
           sudo apt update
-          sudo apt install curl -y
+          sudo apt install wget -y
           mkdir -p -v build/atilo/DEBIAN build/debs
           chmod -v 700 build/atilo/DEBIAN
           cd build
-          curl -L https://u.nu/dhgt9 -o atilo.deb
+          wget https://yadominjinta.github.io/files/dists/termux/extras/binary-all/atilo.deb
           dpkg -X atilo.deb atilo/
           dpkg -e atilo.deb atilo/DEBIAN
           export ATILO_VERSION=$(../atilo |head -n1 |awk '{print $2}')
