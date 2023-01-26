@@ -43,3 +43,4 @@ jobs:
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: "/home/runner/work/atilo/atilo/build/debs/*.deb"
+          tag: 2.2.0
