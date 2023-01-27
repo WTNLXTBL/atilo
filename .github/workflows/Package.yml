@@ -34,9 +34,6 @@ jobs:
           sed -i -E "s/^Version.*/Version:\ ${ATILO_VERSION}/g" atilo/DEBIAN/control
           cp ../atilo atilo/data/data/com.termux/files/usr/bin/atilo
           dpkg -b atilo debs/atilo.deb
-          cd debs/
-          pwd
-          ls
           echo "::set-output name=STATUS::success"
           
       - name: Upload
