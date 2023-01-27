@@ -36,9 +36,17 @@ jobs:
           dpkg -b atilo debs/atilo.deb
           echo "::set-output name=STATUS::success"
           
-      - name: Upload
-        if: steps.package.outputs.STATUS == 'success'
-        uses: actions/upload-artifact@v3
+      - name: Get release
+        id: get_release
+        uses: bruceadams/get-release@v1.3.2
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+      - name: Upload release binary
+        uses: actions/upload-release-asset@v1.0.2
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
         with:
-          name: debs
-          path: "/home/runner/work/atilo/atilo/build/debs/atilo.deb"
+          upload_url: ${{ steps.get_release.outputs.upload_url }}
+          asset_path: debs/atilo.deb
+          asset_name: atilo
+          asset_content_type: application/x-debian-package
