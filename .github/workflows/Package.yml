@@ -42,6 +42,6 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
         with:
           upload_url: https://github.com/WTNLXTBL/atilo/releases/tag/2.2.0
-          asset_path: debs/atilo.deb
+          asset_path: /home/runner/work/atilo/atilo/build/debs/atilo.deb
           asset_name: atilo
           asset_content_type: application/x-debian-package
