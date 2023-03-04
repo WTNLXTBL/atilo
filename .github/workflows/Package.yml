@@ -1,8 +1,11 @@
 name: Package
 on:
-  #release:
-    #types: [ published ]
-    workflow_dispatch:
+  push:
+    branch: [ main ]
+  pull_request:
+    branch: [ main ]
+  release:
+    types: [ published ]
 jobs:
   atilo-package:
     runs-on: ubuntu-latest
