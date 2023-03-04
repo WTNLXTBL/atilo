@@ -5,8 +5,8 @@ pip3 install requests \
              bs4
 
 if [ $? == 0 ];then
-echo "[*]OK"
+echo "[*] OK"
 else
-echo "[*]出错，请重试"
+echo "[*] 出错，请重试"
 exit 1
 fi
