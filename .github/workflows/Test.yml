@@ -26,4 +26,3 @@ jobs:
         run: |
           ./atilo help
           ./atilo images
-          echo "::set-output name=STATUS::success"
