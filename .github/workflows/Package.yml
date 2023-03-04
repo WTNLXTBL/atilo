@@ -30,7 +30,7 @@ jobs:
           mkdir -p -v build/atilo/DEBIAN build/debs
           chmod -v 700 build/atilo/DEBIAN
           cd build
-          wget https://wtnlxtbl.github.io/files/dists/termux/extras/binary-all/atilo.deb
+          wget https://wtnlxtbl.github.io/files/termux/atilo/atilo.deb
           dpkg -X atilo.deb atilo/
           dpkg -e atilo.deb atilo/DEBIAN
           export ATILO_VERSION=$(../atilo |head -n1 |awk '{print $2}')
