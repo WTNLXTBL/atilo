@@ -13,7 +13,7 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v1
         with: 
-          python-version: 3.11.1
+          python-version: 3.11.2
 
       - name: Install Modules
         run: |
@@ -36,12 +36,3 @@ jobs:
           dpkg -b atilo debs/atilo.deb
           echo "::set-output name=STATUS::success"
           
-      - name: Upload release binary
-        uses: actions/upload-release-asset@v1.0.2
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
-        with:
-          upload_url: https://github.com/WTNLXTBL/atilo/releases/tag/2.2.0
-          asset_path: /home/runner/work/atilo/atilo/build/debs/atilo.deb
-          asset_name: atilo
-          asset_content_type: application/x-debian-package
