@@ -39,3 +39,9 @@ jobs:
           dpkg -b atilo debs/atilo.deb
           echo "::set-output name=STATUS::success"
           
+
+      - name: Upload deb file
+        uses: actions/upload-artifact@v3
+        with:
+          name: atilo.deb
+          path: ./atilo.deb
