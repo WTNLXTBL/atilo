@@ -7,12 +7,13 @@
 ## 安装
 
 ``` bash
-apt update && apt install git python python-pip -y
-git clone https://github.com/WTNLXTBL/atilo
-cd atilo
-chmod +x atilo init_atlio
-./init_atilo
-./atilo help
+apt update
+curl -Lo $PREFIX/etc/apt/sources.list.d/atilo.list https://git.wtnlxtbl.eu.org/https://raw.githubusercontent.com/WTNLXTBL/atilo/main/atilo.list
+wget https://git.wtnlxtbl.eu.org/https://raw.githubusercontent.com/WTNLXTBL/atilo/main/keyFile
+apt install gnupg -y && apt download python && apt install ./python*.deb -y
+apt-key add keyFile
+rm keyFile
+apt update && apt install atilo
 ```
 
 ## 使用方法
