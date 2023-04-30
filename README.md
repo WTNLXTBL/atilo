@@ -9,7 +9,7 @@
 ``` bash
 apt update
 curl -Lo $PREFIX/etc/apt/sources.list.d/atilo.list https://git.wtnlxtbl.eu.org/https://raw.githubusercontent.com/WTNLXTBL/atilo/main/atilo.list
-curl -Lo $PREFIX/etc/trusted.gpg.d/atilo.gpg https://git.wtnlxtbl.eu.org/https://raw.githubusercontent.com/WTNLXTBL/atilo/main/atilo.pgp
+curl -Lo $PREFIX/etc/trusted.gpg.d/atilo.gpg https://git.wtnlxtbl.eu.org/https://raw.githubusercontent.com/WTNLXTBL/atilo/main/atilo.gpg
 apt install gnupg -y && apt download python && apt install ./python*.deb -y
 apt-key add keyFile
 rm keyFile
