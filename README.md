@@ -59,3 +59,4 @@ help             帮助
 **[Proot简明手册](https://github.com/myfreess/Mytermuxdoc/wiki/Proot)**:帮助Termux用户编写proot脚本的简明指南
 
 ## Continuously updating
+## Powered By [Dartnode](https://dartnode.com/)
