@@ -60,3 +60,4 @@ help             帮助
 
 ## Continuously updating
 ## Powered By [Dartnode](https://dartnode.com/)
+![Dartnode](https://dartnode.com/assets/dash/images/brand/favicon2.png)
