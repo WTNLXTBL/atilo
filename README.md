@@ -58,6 +58,10 @@ help             帮助
 
 **[Proot简明手册](https://github.com/myfreess/Mytermuxdoc/wiki/Proot)**:帮助Termux用户编写proot脚本的简明指南
 
-## Continuously updating
-## Powered By [Dartnode](https://dartnode.com/)
-![Dartnode](https://dartnode.com/assets/dash/images/brand/favicon2.png)
+## Sponsor
+We are proudly sponsored by DartNode.  DartNode supports our project by providing [mention the specific support they offer, such as infrastructure, services, etc.].
+website: [Dartnode.com](https://dartnode.com)
+
+[![DartNode Logo](https://app.dartnode.com/assets/dash/images/brand/favicon.png)](https://dartnode.com)
+
+Please consider supporting DartNode as they are not only supporting us but also contributing to the open-source community.
